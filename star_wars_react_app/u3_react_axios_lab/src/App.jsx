@@ -14,6 +14,7 @@ import Planets from './components/Planets'
 import Species from './components/Species'
 import Vehicles from './components/Vehicles'
 import StarshipPage from './components/StarshipPage'
+import FilmPage from './components/FilmPage'
 
 function App() {
 const [starships, setStarships] = useState([])
