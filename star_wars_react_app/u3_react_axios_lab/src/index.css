@@ -30,7 +30,7 @@ body {
   min-height: 100vh;
   background-image: url('https://cdn.britannica.com/24/259724-050-5F1007C0/Star-Wars-movie-poster-Episode-IV-A-New-Hope-1977.jpg');
   background-size: cover;
-  background-position: center
+  background-position: center;
 }
 
 h1 {
@@ -81,4 +81,27 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+ .navbar li {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 20%;
+  background-color: white;
+  list-style-type: none;
+
+.vehicles-list {
+  
+}
+
+}
+h2 {
+  color: yellow;
+  text-shadow: 2px 2px 2px black;
+}
+
+p {
+  color: yellow;
+  text-shadow: 2px 2px 2px black;
 }

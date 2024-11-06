@@ -1,15 +1,17 @@
-
+import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
 const Nav = () => {
     return(
 <nav className='navbar'>
-    <div className='navbarLogo'>
-        <a href='/'>Star Wars</a>
-    </div>
     <ul className='navbar-links'>
-        <li><a href='/'>Home</a></li>
-        <li><a href='/starships'>Starships</a></li>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/starships'>Starships</Link></li>
+        <li><Link to='/films'>Films</Link></li>
+        <li><Link to='/characters'>Characters</Link></li>
+        <li><Link to='/planets'>Planets</Link></li>
+        <li><Link to='/species'>Species</Link></li>
+        <li><Link to='/vehicles'>Vehicles</Link></li>
     </ul>
 </nav>
     )

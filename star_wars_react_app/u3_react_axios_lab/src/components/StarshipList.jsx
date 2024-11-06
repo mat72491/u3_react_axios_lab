@@ -2,18 +2,20 @@
 import { useState } from 'react'
 import '../index.css'
 
-const StarshipList = (props) => {
-    return (
-      <div className="starship-list">
-      {props.starships.map((starship, index) => {
-        return (
-        <div key={index} className='card'>
-          <p>Name: {starship.name}</p>
-          <p>Model: {starship.model}</p>
-          <p>Credits: {starship.cost_in_credits}</p>
+import { Link } from 'react-router-dom';
+
+const StarshipList = ({ starships }) => {
+  return (
+    <div className="starship-list">
+      {starships.map((starship, index) => (
+        <div key={index} className="card">
+          <Link to={`/starships/${index + 1}`}>
+            <p>{starship.name}</p>
+          </Link>
         </div>
-      )})}
-</div>
-    )
-  }
-export default StarshipList
+      ))}
+    </div>
+  );
+};
+
+export default StarshipList;
