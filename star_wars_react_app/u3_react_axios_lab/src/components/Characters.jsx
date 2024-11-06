@@ -1,17 +1,19 @@
-
 import { useState } from 'react'
 import '../index.css'
+import { Link } from 'react-router-dom';
 
-const CharacterList = (props) => {
-    return (
-      <div className="character-list">
-      {props.characters.map((character, index) => {
-        return (
-        <div key={index} className='card'>
-          <p>Name: {character.name}</p>
+const CharacterList = ({ characters }) => {
+  return (
+    <div className="starship-list">
+      {characters.map((character, index) => (
+        <div key={index} className="card">
+          <Link to={`/characters/${index}`}>
+            <p>{character.name}</p>
+          </Link>
         </div>
-      )})}
-</div>
-    )
-  }
-export default CharacterList
+      ))}
+    </div>
+  );
+};
+
+export default CharacterList;

@@ -16,6 +16,9 @@ import Vehicles from './components/Vehicles'
 import StarshipPage from './components/StarshipPage'
 import FilmPage from './components/FilmPage'
 import PlanetsPage from './components/PlanetsPage'
+import VehiclesPage from './components/VehiclesPage'
+import CharacterPage from './components/CharacterPage'
+import SpeciesPage from './components/SpeciesPage'
 
 function App() {
 const [starships, setStarships] = useState([])
@@ -86,10 +89,13 @@ useEffect(() => {
       <Route path='/films' element={ <FilmList films={films} /> }/>
       <Route path='films/:id' element={ <FilmPage films={films} />}/>
       <Route path='/characters' element={ <CharacterList characters={characters} />}/>
+      <Route path='/characters/:id' element={ <CharacterPage characters={characters} />}/>
       <Route path='/planets' element={ <Planets planets={planets} />}/>
       <Route path='/planets/:id' element={ <PlanetsPage planets={planets} />}/>
       <Route path='/species' element={ <Species species={species} />}/>
+      <Route path='/species/:id' element={ <SpeciesPage species={species} />}/>
       <Route path='/vehicles' element={ <Vehicles vehicles={vehicles} />} />
+      <Route path='/vehicles/:id' element={ <VehiclesPage vehicles={vehicles} />} />
       </Routes>
     </>
   )

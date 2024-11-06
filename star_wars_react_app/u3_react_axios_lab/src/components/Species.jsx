@@ -1,21 +1,22 @@
 
+
 import { useState } from 'react'
 import '../index.css'
 
-const Species = (props) => {
-    return(
-        <div className='species-list'>
-            {props.species.map((specie, index) => {
-                return (
-                    <div key={index} className='card'>
-                        <li>Name: {specie.name}</li>
-                        <li>Classification: {specie.classification}</li>
-                        <li>Designation: {specie.designation}</li>
-                    </div>
-                )
-            })}
-        </div>
-    )
-}
+import { Link } from 'react-router-dom';
 
-export default Species
+const SpeciesList = ({ species }) => {
+  return (
+    <div className="starship-list">
+      {species.map((specie, index) => (
+        <div key={index} className="card">
+          <Link to={`/species/${index}`}>
+            <p>{specie.name}</p>
+          </Link>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default SpeciesList;
