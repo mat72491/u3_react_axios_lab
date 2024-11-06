@@ -2,18 +2,20 @@
 import { useState } from 'react'
 import '../index.css'
 
-const Planets = (props) => {
-    return (
-      <div className="starship-list">
-      {props.planets.map((planet, index) => {
-        return (
-        <div key={index} className='card'>
-          <p>Name: {planet.name}</p>
-          <p>Climate: {planet.climate}</p>
-          <p>Population: {planet.population}</p>
+import { Link } from 'react-router-dom';
+
+const Planets = ({ planets }) => {
+  return (
+    <div className="starship-list">
+      {planets.map((planet, index) => (
+        <div key={index} className="card">
+          <Link to={`/planets/${index}`}>
+            <p>{planet.name}</p>
+          </Link>
         </div>
-      )})}
-</div>
-    )
-  }
-export default Planets
+      ))}
+    </div>
+  );
+};
+
+export default Planets;
